@@ -49,6 +49,7 @@ var _ = Resource("article", func() {
 			Media(Article, "default")
 		})
 		Response(NotFound)
+		Response(BadRequest, ErrorMedia)
 	})
 
 	Action("list", func() {
