@@ -1,8 +1,5 @@
 consumes:
 - application/json
-- application/xml
-- application/gob
-- application/x-gob
 definitions:
   Article:
     description: Article (default view)
@@ -163,9 +160,6 @@ paths:
       - article
 produces:
 - application/json
-- application/xml
-- application/gob
-- application/x-gob
 responses:
   NotFound:
     description: Not Found

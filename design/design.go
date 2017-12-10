@@ -10,6 +10,8 @@ var _ = API("goa.learn", func() {
 	Description("learning goa")
 	Scheme("http")
 	Host("localhost:8080")
+	Consumes("application/json")
+	Produces("application/json")
 })
 
 var Article = MediaType("application/vnd.article+json", func() {

@@ -13,12 +13,15 @@ package client
 import (
 	"github.com/goadesign/goa"
 	"net/http"
+	"time"
 )
 
 // Article (default view)
 //
 // Identifier: application/vnd.article+json; view=default
 type Article struct {
+	// 作成日時
+	CreatedAt time.Time `form:"created_at" json:"created_at" xml:"created_at"`
 	// 作成者
 	CreatedBy *int `form:"created_by,omitempty" json:"created_by,omitempty" xml:"created_by,omitempty"`
 	// ID
@@ -33,6 +36,7 @@ func (mt *Article) Validate() (err error) {
 	if mt.Text == "" {
 		err = goa.MergeErrors(err, goa.MissingAttributeError(`response`, "text"))
 	}
+
 	return
 }
 
