@@ -1,6 +1,8 @@
-package main
+package mock
 
 import (
+	"time"
+
 	"github.com/goadesign/goa"
 	"github.com/uzimith/goa-learn/app"
 )
@@ -17,22 +19,32 @@ func NewArticleController(service *goa.Service) *ArticleController {
 
 // List runs the list action.
 func (c *ArticleController) List(ctx *app.ListArticleContext) error {
-	// ArticleController_List: start_implement
-
-	// Put your logic here
-
-	// ArticleController_List: end_implement
-	res := app.AjaGreenArticleCollection{}
+	createdBy := 1
+	res := app.ArticleCollection{
+		&app.Article{
+			ID:        1,
+			Text:      "aiueo",
+			CreatedBy: &createdBy,
+			CreatedAt: time.Now(),
+		},
+		&app.Article{
+			ID:        2,
+			Text:      "kakikukeko",
+			CreatedBy: &createdBy,
+			CreatedAt: time.Now(),
+		},
+	}
 	return ctx.OK(res)
 }
 
 // Show runs the show action.
 func (c *ArticleController) Show(ctx *app.ShowArticleContext) error {
-	// ArticleController_Show: start_implement
-
-	// Put your logic here
-
-	// ArticleController_Show: end_implement
-	res := &app.AjaGreenArticle{}
-	return ctx.OK(res)
+	createdBy := 1
+	res := app.Article{
+		ID:        ctx.ID,
+		Text:      "aiueo",
+		CreatedBy: &createdBy,
+		CreatedAt: time.Now(),
+	}
+	return ctx.OK(&res)
 }

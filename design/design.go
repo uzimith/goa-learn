@@ -23,12 +23,14 @@ var Article = MediaType("application/vnd.article+json", func() {
 		Attribute("created_by", Integer, "作成者", func() {
 			Example(1)
 		})
-		Required("id", "text")
+		Attribute("created_at", DateTime, "作成日時")
+		Required("id", "text", "created_at")
 	})
 	View("default", func() {
 		Attribute("id")
 		Attribute("text")
 		Attribute("created_by")
+		Attribute("created_at")
 	})
 })
 

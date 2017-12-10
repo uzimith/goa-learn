@@ -1,3 +1,4 @@
+// +build mock
 //go:generate goagen bootstrap -d github.com/uzimith/goa-learn/design
 
 package main
@@ -6,11 +7,12 @@ import (
 	"github.com/goadesign/goa"
 	"github.com/goadesign/goa/middleware"
 	"github.com/uzimith/goa-learn/app"
+	"github.com/uzimith/goa-learn/mock"
 )
 
 func main() {
 	// Create service
-	service := goa.New("cellar")
+	service := goa.New("goa.learn")
 
 	// Mount middleware
 	service.Use(middleware.RequestID())
@@ -19,7 +21,7 @@ func main() {
 	service.Use(middleware.Recover())
 
 	// Mount "article" controller
-	c := NewArticleController(service)
+	c := mock.NewArticleController(service)
 	app.MountArticleController(service, c)
 
 	// Start service
