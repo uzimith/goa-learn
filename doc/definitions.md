@@ -9,9 +9,10 @@ Article (default view)
 
 |Name|Description|Schema|
 |---|---|---|
+|**created_at**  <br>*required*|作成日時  <br>**Example** : `"2016-03-20T09:39:48Z"`|string (date-time)|
 |**created_by**  <br>*optional*|作成者  <br>**Example** : `1`|integer (int64)|
 |**id**  <br>*required*|ID  <br>**Example** : `1`|integer (int64)|
-|**text**  <br>*required*|text  <br>**Example** : `"Iure voluptatem."`|string|
+|**text**  <br>*required*|text  <br>**Example** : `"Voluptatem ea."`|string|
 
 
 <a name="articlecollection"></a>
