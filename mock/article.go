@@ -19,20 +19,14 @@ func NewArticleController(service *goa.Service) *ArticleController {
 
 // List runs the list action.
 func (c *ArticleController) List(ctx *app.ListArticleContext) error {
-	createdBy := 1
-	res := app.ArticleCollection{
-		&app.Article{
-			ID:        1,
+	res := make(app.ArticleCollection, 0, len(ctx.ID))
+	for idx, id := range ctx.ID {
+		res = append(res, &app.Article{
+			ID:        id,
 			Text:      "aiueo",
-			CreatedBy: &createdBy,
+			CreatedBy: &idx,
 			CreatedAt: time.Now(),
-		},
-		&app.Article{
-			ID:        2,
-			Text:      "kakikukeko",
-			CreatedBy: &createdBy,
-			CreatedAt: time.Now(),
-		},
+		})
 	}
 	return ctx.OK(res)
 }
