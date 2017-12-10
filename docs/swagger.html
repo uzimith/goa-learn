@@ -475,15 +475,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p><code>application/json</code></p>
 </li>
-<li>
-<p><code>application/xml</code></p>
-</li>
-<li>
-<p><code>application/gob</code></p>
-</li>
-<li>
-<p><code>application/x-gob</code></p>
-</li>
 </ul>
 </div>
 </div>
@@ -493,15 +484,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul>
 <li>
 <p><code>application/json</code></p>
-</li>
-<li>
-<p><code>application/xml</code></p>
-</li>
-<li>
-<p><code>application/gob</code></p>
-</li>
-<li>
-<p><code>application/x-gob</code></p>
 </li>
 </ul>
 </div>
@@ -615,7 +597,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h5 id="_response_200">Response 200</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"[{\"created_at\":\"2016-03-20T09:39:48Z\",\"created_by\":1,\"id\":1,\"text\":\"Voluptatem ea.\"},{\"created_at\":\"2016-03-20T09:39:48Z\",\"created_by\":1,\"id\":1,\"text\":\"Voluptatem ea.\"},{\"created_at\":\"2016-03-20T09:39:48Z\",\"created_by\":1,\"id\":1,\"text\":\"Voluptatem ea.\"}]"</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">"[{\"created_at\":\"2016-03-20T09:39:48.000+0000\",\"created_by\":1,\"id\":1,\"text\":\"Voluptatem ea.\"},{\"created_at\":\"2016-03-20T09:39:48.000+0000\",\"created_by\":1,\"id\":1,\"text\":\"Voluptatem ea.\"},{\"created_at\":\"2016-03-20T09:39:48.000+0000\",\"created_by\":1,\"id\":1,\"text\":\"Voluptatem ea.\"}]"</code></pre>
 </div>
 </div>
 </div>
@@ -628,7 +610,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
   "detail" : "Value of ID must be an integer",
   "id" : "3F1FKVRR",
   "meta" : {
-    "timestamp" : 1458609066
+    "timestamp" : 1.458609E9
   },
   "status" : "400"
 }</code></pre>
@@ -742,7 +724,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
-  "created_at" : "2016-03-20T09:39:48Z",
+  "created_at" : "2016-03-20T09:39:48.000+0000",
   "created_by" : 1,
   "id" : 1,
   "text" : "Voluptatem ea."
@@ -759,7 +741,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
   "detail" : "Value of ID must be an integer",
   "id" : "3F1FKVRR",
   "meta" : {
-    "timestamp" : 1458609066
+    "timestamp" : 1.458609E9
   },
   "status" : "400"
 }</code></pre>
@@ -796,7 +778,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>created_at</strong><br>
 <em>required</em></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">作成日時<br>
-<strong>Example</strong> : <code>"2016-03-20T09:39:48Z"</code></p></td>
+<strong>Example</strong> : <code>"2016-03-20T09:39:48.000+0000"</code></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">string (date-time)</p></td>
 </tr>
 <tr>
@@ -877,7 +859,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <em>optional</em></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">a meta object containing non-standard meta-information about the error.<br>
 <strong>Example</strong> : <code>{
-  "timestamp" : 1458609066
+  "timestamp" : 1.458609E9
 }</code></p></td>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">object</p></td>
 </tr>
@@ -896,7 +878,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-12-11 01:22:07 JST
+Last updated 2017-12-11 01:43:58 JST
 </div>
 </div>
 </body>
